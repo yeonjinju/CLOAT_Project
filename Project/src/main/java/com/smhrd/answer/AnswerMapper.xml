@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.answer.AnswerMapper">
+
+
+	<!-- 댓글 달기 수정 -->
+	<select id="getAnswerByQnaIdx" resultType="com.smhrd.answer.AnswerVO">
+	    SELECT * FROM tb_answer WHERE qna_idx = #{qna_idx}
+	</select>
+	
+	<insert id="insertAnswer" parameterType="com.smhrd.answer.AnswerVO">
+	    INSERT INTO tb_answer (qna_idx, answer_content, answer_file, created_at, admin_id)
+	    VALUES (#{qna_idx}, #{answer_content}, #{answer_file}, SYSTIMESTAMP, #{admin_id})
+	</insert>
+	
+	<update id="updateAnswer" parameterType="com.smhrd.answer.AnswerVO">
+	    UPDATE tb_answer SET answer_content = #{answer_content}, answer_file = #{answer_file}
+	    WHERE answer_idx = #{answer_idx}
+	</update>
+	
+	<delete id="deleteAnswer" parameterType="int">
+	    DELETE FROM tb_answer WHERE answer_idx = #{answer_idx}
+	</delete>
+
+
+
+</mapper>
+
+

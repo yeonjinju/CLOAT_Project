@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.member.MemberMapper">
+
+	<select id="login" parameterType="com.smhrd.member.MemberVO" resultType = "com.smhrd.member.MemberVO">
+		select * from tb_user where id =#{id} and pw =#{pw}
+	</select>	
+	
+	<insert id="join" parameterType="com.smhrd.member.MemberVO">
+      INSERT INTO tb_user (
+    ID, PW, NAME, EMAIL, PHONE, PROFILE_IMG, USER_TYPE, PASS_QA, PASS_ANSWER, CREATED_AT
+) VALUES (
+    #{id}, #{pw}, #{name}, #{email}, #{phone}, #{profile_img, jdbcType=VARCHAR}, #{user_type}, #{pass_qa}, #{pass_answer}, SYSTIMESTAMP
+)
+	</insert>
+   
+	<select id="IdCheck" resultType="int">
+ 		select count(*) from tb_user where id =#{id} 
+  	</select>
+  	
+  	<select id="findPw" parameterType="com.smhrd.member.MemberVO"
+  						resultType="String">
+ 		select pw from tb_user where pass_qa = #{pass_qa} and pass_answer = #{pass_answer} and id = #{id}
+  	</select>
+  	
+  	<select id="findId1" parameterType="com.smhrd.member.MemberVO"
+  						resultType="String">
+ 		select id from tb_user where name = #{name} and phone = #{phone} 
+  	</select>
+  	
+  	<select id="findId2" parameterType="com.smhrd.member.MemberVO"
+  						resultType="String">
+ 		select id from tb_user where name = #{name} and email = #{email} 
+  	</select>  	 
+	
+ 	<update id="update" parameterType="com.smhrd.member.MemberVO">
+		update tb_user set pw=#{pw}, email=#{email}, phone=#{phone}, profile_img=#{profile_img, jdbcType=VARCHAR}, pass_qa=#{pass_qa}, pass_answer=#{pass_answer} where id=#{id}
+	</update>	
+	
+  	<select id="getTransformed_file" resultType="com.smhrd.upload.UploadVO">
+  		select * from tb_upload where id = #{id} order by created_at DESC
+  	</select>  		
+  	   
+  	   
+  	<select id="newNotice" resultType="com.smhrd.notice.NoticeVO">
+  	  	<![CDATA[SELECT *
+				FROM (
+				    SELECT *
+				    FROM tb_notice
+				    ORDER BY created_at DESC
+				)
+				WHERE ROWNUM <= 5
+				]]>
+  	</select>
+  	
+  	<select id="newReview" resultType="com.smhrd.review.ReviewVO">
+  	  	  	  	<![CDATA[SELECT *
+				FROM (
+				    SELECT *
+				    FROM tb_review
+				    ORDER BY created_at DESC
+				)
+				WHERE ROWNUM <= 5
+				]]>
+  	</select>
+  	   
+</mapper>

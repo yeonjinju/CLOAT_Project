@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.review.ReviewMapper">
+
+	<select id="ReviewList" resultType="com.smhrd.review.ReviewVO">
+		SELECT * FROM tb_review
+	</select>
+
+	<select id="getReview" parameterType="int"
+		resultType="com.smhrd.review.ReviewVO">
+		SELECT * FROM tb_review WHERE review_idx = #{review_idx}
+	</select>
+
+	<select id="getTotalCount" resultType="int">
+		SELECT COUNT(*)
+		FROM tb_review
+	</select>
+
+	<select id="getReviewsByPage"
+		resultType="com.smhrd.review.ReviewVO">
+    <![CDATA[
+        SELECT * FROM (
+            SELECT ROWNUM rn, a.*
+            FROM (
+                SELECT t.*, cm.cmt_idx FROM tb_review t left join tb_comment cm on t.review_idx = cm.review_idx ORDER BY t.created_at DESC
+            ) a
+            WHERE ROWNUM <= #{endRow}
+        )
+        WHERE rn >= #{startRow}
+    ]]>
+	</select>
+
+	<update id="updateReviewViews" parameterType="int">
+		UPDATE tb_review
+		SET review_views = review_views + 1
+		WHERE review_idx = #{reviewIdx}
+	</update>
+
+	<!-- 검색기능 -->
+	<select id="ReviewSearch" resultType="com.smhrd.review.ReviewVO">
+		select * from tb_review
+		<where>
+			<choose>
+				<when test="param1 == 'review_title'">
+					review_title LIKE '%' || #{param2} || '%'
+				</when>
+				<when test="param1 == 'review_content'">
+					review_content LIKE '%' || #{param2} || '%'
+				</when>
+				<otherwise>
+					id is null
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<!-- 글쓰기 기능 -->
+	<insert id="write" parameterType="com.smhrd.review.ReviewVO">
+		insert into
+		tb_review(review_title, review_content, review_file, created_at,
+		review_views, id) values(
+		#{review_title}, #{review_content},
+		#{review_file, jdbcType=VARCHAR}, systimestamp, #{review_views}, #{id}
+		)
+	</insert>
+
+	<!-- 댓글 달기 수정 -->
+	<select id="getAnswerByReviewIdx"
+		resultType="com.smhrd.review.ReviewVO">
+		SELECT * FROM tb_comment WHERE review_idx = #{review_idx}
+	</select>
+
+	<insert id="insertReviewAnswer"
+		parameterType="com.smhrd.review.ReviewVO">
+		INSERT INTO tb_comment (review_idx, cmt_content,
+		created_at, updated_at, id, cmt_heart)
+		VALUES (#{review_idx},
+		#{cmt_content}, SYSTIMESTAMP, SYSTIMESTAMP, #{id}, 0
+		)
+	</insert>
+
+	<update id="updateReviewAnswer"
+		parameterType="com.smhrd.review.ReviewVO">
+		UPDATE tb_comment SET cmt_content = #{cmt_content}
+		WHERE
+		cmt_idx = #{cmt_idx}
+	</update>
+
+	<delete id="deleteReviewAnswer" parameterType="int">
+		DELETE FROM
+		tb_comment WHERE cmt_idx = #{cmt_idx}
+	</delete>
+
+	<!-- 마이페이지 - 내가 쓴 후기 -->
+	<select id="MyReview" resultType="com.smhrd.review.ReviewVO">
+    <![CDATA[
+        SELECT * FROM (
+            SELECT ROWNUM rn, a.*
+            FROM (
+                SELECT * FROM tb_review 
+                where id =#{id}
+                ORDER BY created_at DESC
+            ) a
+            WHERE ROWNUM <= #{endRow}
+        )
+        WHERE rn >= #{startRow}
+    ]]>
+	</select>
+
+	<select id="selectReviewByNo" parameterType="int"
+		resultType="com.smhrd.review.ReviewVO">
+		SELECT review_idx, review_title, review_content, review_file, review_views,
+		id, created_at
+		FROM tb_review
+		WHERE review_idx = #{review_idx}
+	</select>
+
+	<update id="updateReviewEdit"
+		parameterType="com.smhrd.review.ReviewVO">
+		UPDATE tb_review
+		SET review_title = #{review_title},
+		review_content = #{review_content},
+		review_file = #{review_file, jdbcType=VARCHAR}
+		WHERE review_idx = #{review_idx}
+	</update>
+
+	<!-- 게시글 삭제 -->
+	<delete id="deleteReviewByNo" parameterType="int">
+		DELETE FROM tb_review WHERE review_idx = #{review_idx}
+	</delete>
+	<delete id="deleteReviewAnswerByReviewIdx" parameterType="int">
+		DELETE FROM tb_comment WHERE review_idx = #{review_idx}
+	</delete>
+	
+	
+	
+	
+	<!-- 좋아요 표시 -->
+	<!-- CommentHeartMapper.xml -->
+	<mapper namespace="com.smhrd.review.CommentHeartMapper">
+	
+	    <select id="countByUserAndComment" parameterType="com.smhrd.review.CommentHeartVO" resultType="int">
+	        SELECT COUNT(*) 
+	        FROM tb_comment_heart 
+	        WHERE id = #{id} AND cmt_idx = #{cmt_idx}
+	    </select>
+	
+	    <insert id="insert" parameterType="com.smhrd.review.CommentHeartVO">
+	        INSERT INTO tb_comment_heart (id, cmt_idx) VALUES (#{id}, #{cmt_idx})
+	    </insert>
+	
+	</mapper>
+	
+	<!-- CommentMapper.xml -->
+	<mapper namespace="com.smhrd.review.CommentMapper">
+
+    <update id="increaseHeart" parameterType="int">
+        UPDATE tb_comment
+        SET cmt_heart = NVL(cmt_heart, 0) + 1
+        WHERE cmt_idx = #{cmt_idx}
+    </update>
+
+    <select id="getHeartCount" parameterType="int" resultType="int">
+        SELECT NVL(cmt_heart, 0) FROM tb_comment WHERE cmt_idx = #{cmt_idx}
+    </select>
+
+</mapper>
+	
+	
+	
+	
+	
+	
+</mapper>

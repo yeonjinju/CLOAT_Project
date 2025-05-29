@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.review.CommentMapper">
+
+    <update id="increaseHeart">
+	    UPDATE tb_comment
+	    SET cmt_heart = cmt_heart + 1
+	    WHERE cmt_idx = #{cmt_idx}
+	</update>
+	
+	<select id="getHeartCount" resultType="int">
+	    SELECT cmt_heart
+	    FROM tb_comment
+	    WHERE cmt_idx = #{cmt_idx}
+	</select>
+	
+	<select id="countByUserAndComment" resultType="int">
+	    SELECT COUNT(*) FROM tb_comment_heart 
+	    WHERE id = #{id} AND cmt_idx = #{cmt_idx}
+	</select>
+
+	
+	<insert id="insertCommentHeart">
+	    INSERT INTO tb_comment_heart (id, review_idx, cmt_idx)
+	    VALUES (#{id}, #{review_idx}, #{cmt_idx})
+	</insert>
+
+
+</mapper>
