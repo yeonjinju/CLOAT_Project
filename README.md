@@ -1,6 +1,3 @@
-# CLOAT_Project 최종ver
-
-
 # CLOAT Image Cloaking Service
 
 ## 개발환경
