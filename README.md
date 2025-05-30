@@ -1,8 +1,6 @@
-# 사진은 지켜줘야 사진이다!
-## TEAM PROJECT README.
+# 사진은 지켜줘야 사진이다! CLOAT TEAM PROJECT README.
 
 ## 소개
----
 최근 딥페이크 기술을 악용한 디지털 성범죄가 급증하고 있으며, 특히 피해자와 가해자의 다수가 10~20대 청소년과 청년층으로 확인되고 있습니다.<br>
 그중에서도 딥페이크 기반의 허위 영상물 제작 범죄가 전체의 90% 이상을 차지하고 있어, 기술적 예방 수단 마련이 시급한 상황입니다.<br>
 이에 따라, 피해를 사전에 방지하고 사용자의 이미지 보호와 디지털 성범죄 인식 제고를 위한 웹서비스를 구축하였습니다.<br>
@@ -38,3 +36,11 @@
 | 서비스화면 #7 | 서비스화면 #8 |
 | ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | 비고 |
 
+
+## 서비스 아키텍쳐
+![image](https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade)
+
+## ☠️트러블 슈팅
+| 트러블슈팅 #1 | 트러블슈팅 #2|
+| --- | --- |
+| ![image](https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818) |  ![image](https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a) |
