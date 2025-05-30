@@ -26,9 +26,10 @@
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white"/>
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
 </p>
+
 ## 화면 구성
 | 서비스화면 #1 | 서비스화면 #2 |
-|---|---|
+| --- | --- |
 | ![1  첫화면](https://github.com/user-attachments/assets/589838a7-b7ea-407e-b51d-e6d568041a50) | ![2  서비스화면](https://github.com/user-attachments/assets/acfc865c-d063-405a-8d9f-8cc91497d827) |
 | 서비스화면 #3 | 서비스화면 #4 |
 | ![3  회원가입](https://github.com/user-attachments/assets/9de5c82f-9ab8-4158-aac5-44ce8a55d935) | ![4  마이페이지](https://github.com/user-attachments/assets/633ca638-cc83-4989-9f61-be97ce30d4f3) |
