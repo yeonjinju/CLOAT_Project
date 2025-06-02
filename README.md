@@ -39,16 +39,10 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 | 서비스화면 #5 | 서비스화면 #6 |
 | ![5  게시판전체](https://github.com/user-attachments/assets/a75620ad-f04d-456c-980a-2cbccdc22eba) | ![6  지도](https://github.com/user-attachments/assets/9c559871-d348-44f7-8dca-728d6db7bb55) |
 | 서비스화면 #7 | 교란 전 -> 후 이미지 예시 |
-| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <img src="![전](https://github.com/user-attachments/assets/56428d16-862c-437d-b7ae-20cc05d2afac)" width="200" height="300"/>
- |
+| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <p align="center"> <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="200"/> **->** <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="200"/> </p>|
 
-
-<P><img src="![전](https://github.com/user-attachments/assets/42042f65-4f17-4990-9729-3f3a0b039133)
-" width="130" height="260"/></P>
-
--> ![후](https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c)
- </P>
 ### 🚀 주요 기능
+
 - AI교란 삽인한 첨부파일 이미지 업로드 및 다운로드 (미리보기 가능)
 - 로그인 후 마이페이지에서 내가 업로드한 사진을 한번에 볼 수 있는 클라우드 서비스 제공
 - 반응형 웹으로 설계되어 테블릿, 모바일, 데스크탑 환경에서도 자동 최적화된 UI제공
@@ -66,7 +60,7 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 
 
 ## 서비스 아키텍쳐
-![image](https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade)
+<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="400" />
 
 ## ☠️트러블 슈팅
 | 트러블슈팅 #1 | 트러블슈팅 #2|
