@@ -1,5 +1,5 @@
 # [2025] 사진은 지켜줘야 사진이다! CLOAT TEAM_PROJECT.<br/>
-#### 기술 스택
+### 기술 스택
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
@@ -19,6 +19,7 @@
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
 </p>
 <br/>
+
 ### 🛡️ 프로젝트 개요
 cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를 보호하기 위해, **Adversarial Perturbation(교란 패턴)**을 이미지에 삽입해주는 서비스입니다.
 사용자는 이미지를 업로드하고, 교란 삽입 후 다운로드하여 SNS에 안전하게 게시할 수 있습니다.
@@ -42,7 +43,7 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 | ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <p align="center"> <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="200"/> **->** <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="200"/> </p>|
 
 ### 🚀 주요 기능
-
+---
 - AI교란 삽인한 첨부파일 이미지 업로드 및 다운로드 (미리보기 가능)
 - 로그인 후 마이페이지에서 내가 업로드한 사진을 한번에 볼 수 있는 클라우드 서비스 제공
 - 반응형 웹으로 설계되어 테블릿, 모바일, 데스크탑 환경에서도 자동 최적화된 UI제공
@@ -59,21 +60,24 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
   - 관리자 댓글에 대한 좋아요 포기 기능 (중복 방지 처리)
 
 
-## 서비스 아키텍쳐
+### 서비스 아키텍쳐
+---
 본 서비스는 Spring 기반의 eGovFrame 프레임워크와 MyBatis, Oracle DB를 활용하여 전체 시스템을 구성하였습니다.<br>
 클라이언트는 HTML5, CSS, JavaScript(jQuery)를 통해 UI와 상호작용하며, Kakao 지도 API와 연동되어 위치 기반 기능도 제공합니다.
 <img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="500" />
 
 
-## ☠️트러블 슈팅
+### ☠️트러블 슈팅
+---
 | 트러블슈팅 #1 | 트러블슈팅 #2|
 | --- | --- |
 | ![image](https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818) |  ![image](https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a) |
 | 1. **이미지 업로드 제한 문제** <br> - 증상: 3MB 이상의 이미지 파일이 업로드되지 않음 <br> - 원인: 기본 설정에서 파일 업로드 용량 제한 <br> - 해결: `web.xml`과 `servlet-context.xml`에서 `maxUploadSize` 설정 추가 | 2. **기관 위치 클릭 시 지도 이동 안 됨** <br> - 증상: 마커 클릭 시 위치 이동 기능 작동 안 함 <br> - 원인: `var` 사용으로 인한 반복문 스코프 문제 <br> - 해결: `marker`, `overlay`를 배열로 저장하고 `let`을 사용해 이벤트별 개별 접근 |
-
+<br>
 
 
 ### 개선사항
+---
 - 이미지 교란 퀄리티 강화 (Fawkes API의 한계점)
 - 변환된 이미지 캡쳐시 클로킹 기능의 효과가 사라지는지 (논문 확인 필요)
 - 어떻게 수익화를 할건지 생각해보기
