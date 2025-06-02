@@ -63,8 +63,8 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 ### 서비스 아키텍쳐
 ---
 본 서비스는 Spring 기반의 eGovFrame 프레임워크와 MyBatis, Oracle DB를 활용하여 전체 시스템을 구성하였습니다.<br>
-클라이언트는 HTML5, CSS, JavaScript(jQuery)를 통해 UI와 상호작용하며, Kakao 지도 API와 연동되어 위치 기반 기능도 제공합니다.
-<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="500" />
+클라이언트는 HTML5, CSS, JavaScript(jQuery)를 통해 UI와 상호작용하며, Kakao 지도 API와 연동되어 위치 기반 기능도 제공합니다. <br>
+<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="450" />
 
 
 ### ☠️트러블 슈팅
