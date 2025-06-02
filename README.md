@@ -40,7 +40,7 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 | 서비스화면 #5 | 서비스화면 #6 |
 | ![5  게시판전체](https://github.com/user-attachments/assets/a75620ad-f04d-456c-980a-2cbccdc22eba) | ![6  지도](https://github.com/user-attachments/assets/9c559871-d348-44f7-8dca-728d6db7bb55) |
 | 서비스화면 #7 | 교란 전 -> 후 이미지 예시 |
-| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <p align="center"> <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="200"/> **->** <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="200"/> </p>|
+| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <p align="center"> <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="180"/> **->** <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="180"/> </p>|
 
 ### 🚀 주요 기능
 ---
