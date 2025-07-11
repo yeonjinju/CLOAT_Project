@@ -18,11 +18,12 @@
 		<constructor-arg ref="hikariConfig"></constructor-arg>
 	</bean>
 
+	<!-- SqlSessionFactoryBean에 mapperLocations 추가 -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="hikariDatasource"/>
-		
+	   <property name="dataSource" ref="hikariDatasource"/>
+	     <!-- resources/mapper 아래의 모든 XML을 매퍼로 로드 -->
+	     <property name="mapperLocations" value="classpath*:mapper/*.xml"/>   
 	</bean>
-
 	<mybatis-spring:scan base-package="com.smhrd" />
 	
 </beans>
