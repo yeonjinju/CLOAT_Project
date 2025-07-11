@@ -181,6 +181,7 @@
       
    </dependencies>
    <build>
+  		    <finalName>cloat</finalName> <!-- 생성될 war 파일 이름 -->
       <plugins>
          <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
