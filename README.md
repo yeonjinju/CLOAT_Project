@@ -68,17 +68,16 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 ---
 본 서비스는 Spring 기반의 eGovFrame 프레임워크와 MyBatis, Oracle DB를 활용하여 전체 시스템을 구성하였습니다.<br>
 클라이언트는 HTML5, CSS, JavaScript(jQuery)를 통해 UI와 상호작용하며, Kakao 지도 API와 연동되어 위치 기반 기능도 제공합니다. <br>
-<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="600" />
+<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="700" />
 
 
 ### ☠️트러블 슈팅
 ---
-| 트러블슈팅 #1 |
+| 트러블슈팅 |
 | --- |
-| <img src="https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818" width="600"/> |
+| <img src="https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818" width="700"/> |
 | 1. **이미지 업로드 제한 문제** <br> - 증상: 3MB 이상의 이미지 파일이 업로드되지 않음 <br> - 원인: 기본 설정에서 파일 업로드 용량 제한 <br> - 해결: `web.xml`과 `servlet-context.xml`에서 `maxUploadSize` 설정 추가 |
-| 트러블슈팅 #2|
-| <img src="https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a" width="600"/> |
+| <img src="https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a" width="700"/> |
 | 2. **기관 위치 클릭 시 지도 이동 안 됨** <br> - 증상: 마커 클릭 시 위치 이동 기능 작동 안 함 <br> - 원인: `var` 사용으로 인한 반복문 스코프 문제 <br> - 해결: `marker`, `overlay`를 배열로 저장하고 `let`을 사용해 이벤트별 개별 접근 |
 <br>
 
