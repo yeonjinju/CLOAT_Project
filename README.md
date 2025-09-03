@@ -1,7 +1,6 @@
 # [2025] 사진은 지켜줘야 사진이다!<br/>
 
-**Claruty & Locking Of Authentic Teens**<br/>
-CLOAT TEAM_PROJECT
+**Claruty & Locking Of Authentic Teens : CLOAT** TEAM_PROJECT
 
 ### 🛡️ 프로젝트 개요
 cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를 보호하기 위해, **Adversarial Perturbation(교란 패턴)** 을 이미지에 삽입해주는 서비스입니다.
@@ -36,15 +35,16 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 <br/>
 
 ### 화면 구성
-| 서비스화면 #1 | 서비스화면 #2 |
-| --- | --- |
+| 서비스화면 <br/> #메인 페이지 | 서비스화면 <br/> #이미지변환 서비스 페이지 |
+|:---:|:---:|
 | ![1  첫화면](https://github.com/user-attachments/assets/589838a7-b7ea-407e-b51d-e6d568041a50) | ![2  서비스화면](https://github.com/user-attachments/assets/acfc865c-d063-405a-8d9f-8cc91497d827) |
-| 서비스화면 #3 | 서비스화면 #4 |
+| 서비스화면 <br/> #회원가입 페이지 | 서비스화면 <br/> #마이페이지 |
 | ![3  회원가입](https://github.com/user-attachments/assets/9de5c82f-9ab8-4158-aac5-44ce8a55d935) | ![4  마이페이지](https://github.com/user-attachments/assets/633ca638-cc83-4989-9f61-be97ce30d4f3) |
-| 서비스화면 #5 | 서비스화면 #6 |
+| 서비스화면 <br/> #후기,문의 게시판 | 서비스화면 <br/> #도움기관 지도 페이지 |
 | ![5  게시판전체](https://github.com/user-attachments/assets/a75620ad-f04d-456c-980a-2cbccdc22eba) | ![6  지도](https://github.com/user-attachments/assets/9c559871-d348-44f7-8dca-728d6db7bb55) |
-| 서비스화면 #7 | 교란 전 -> 후 이미지 예시 |
-| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <p align="center"> <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="180"/> **->** <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="180"/> </p>|
+| 서비스화면 <br/> #카카오톡 문의 연결 | 교란 전 -> 후 이미지 예시 |
+| ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="180" align="middle"/> <span align="middle">→</span> <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="180" align="middle"/> |
+
 
 ### 🚀 주요 기능
 ---
@@ -68,15 +68,18 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 ---
 본 서비스는 Spring 기반의 eGovFrame 프레임워크와 MyBatis, Oracle DB를 활용하여 전체 시스템을 구성하였습니다.<br>
 클라이언트는 HTML5, CSS, JavaScript(jQuery)를 통해 UI와 상호작용하며, Kakao 지도 API와 연동되어 위치 기반 기능도 제공합니다. <br>
-<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="450" />
+<img src="https://github.com/user-attachments/assets/377d3f38-b0fe-437b-b4fa-e35e6b03aade" width="600" />
 
 
 ### ☠️트러블 슈팅
 ---
-| 트러블슈팅 #1 | 트러블슈팅 #2|
-| --- | --- |
-| ![image](https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818) |  ![image](https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a) |
-| 1. **이미지 업로드 제한 문제** <br> - 증상: 3MB 이상의 이미지 파일이 업로드되지 않음 <br> - 원인: 기본 설정에서 파일 업로드 용량 제한 <br> - 해결: `web.xml`과 `servlet-context.xml`에서 `maxUploadSize` 설정 추가 | 2. **기관 위치 클릭 시 지도 이동 안 됨** <br> - 증상: 마커 클릭 시 위치 이동 기능 작동 안 함 <br> - 원인: `var` 사용으로 인한 반복문 스코프 문제 <br> - 해결: `marker`, `overlay`를 배열로 저장하고 `let`을 사용해 이벤트별 개별 접근 |
+| 트러블슈팅 #1 |
+| --- |
+| <img src="https://github.com/user-attachments/assets/436b09bd-5b54-4b10-8680-31b95f956818" width="600"/> |
+| 1. **이미지 업로드 제한 문제** <br> - 증상: 3MB 이상의 이미지 파일이 업로드되지 않음 <br> - 원인: 기본 설정에서 파일 업로드 용량 제한 <br> - 해결: `web.xml`과 `servlet-context.xml`에서 `maxUploadSize` 설정 추가 |
+| 트러블슈팅 #2|
+| <img src="https://github.com/user-attachments/assets/064e8000-230c-48c4-a831-e4e3efee2d1a" width="600"/> |
+| 2. **기관 위치 클릭 시 지도 이동 안 됨** <br> - 증상: 마커 클릭 시 위치 이동 기능 작동 안 함 <br> - 원인: `var` 사용으로 인한 반복문 스코프 문제 <br> - 해결: `marker`, `overlay`를 배열로 저장하고 `let`을 사용해 이벤트별 개별 접근 |
 <br>
 
 
