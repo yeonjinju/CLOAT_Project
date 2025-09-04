@@ -34,15 +34,15 @@ cloat는 인공지능 기반 딥페이크 생성으로부터 개인 이미지를
 </p>
 <br/>
 
-### 화면 구성
-| 서비스화면 <br/> #메인 페이지 | 서비스화면 <br/> #이미지변환 서비스 페이지 |
+### 서비스 화면 구성
+| #메인 페이지 | #이미지변환 서비스 페이지 |
 |:---:|:---:|
 | ![1  첫화면](https://github.com/user-attachments/assets/589838a7-b7ea-407e-b51d-e6d568041a50) | ![2  서비스화면](https://github.com/user-attachments/assets/acfc865c-d063-405a-8d9f-8cc91497d827) |
-| 서비스화면 <br/> #회원가입 페이지 | 서비스화면 <br/> #마이페이지 |
+| #회원가입 페이지 | #마이페이지 |
 | ![3  회원가입](https://github.com/user-attachments/assets/9de5c82f-9ab8-4158-aac5-44ce8a55d935) | ![4  마이페이지](https://github.com/user-attachments/assets/633ca638-cc83-4989-9f61-be97ce30d4f3) |
-| 서비스화면 <br/> #후기,문의 게시판 | 서비스화면 <br/> #도움기관 지도 페이지 |
+| #후기,문의 게시판 | #도움기관 지도 페이지 |
 | ![5  게시판전체](https://github.com/user-attachments/assets/a75620ad-f04d-456c-980a-2cbccdc22eba) | ![6  지도](https://github.com/user-attachments/assets/9c559871-d348-44f7-8dca-728d6db7bb55) |
-| 서비스화면 <br/> #카카오톡 문의 연결 | 교란 전 -> 후 이미지 예시 |
+| #카카오톡 문의 연결 | 교란 전 -> 후 이미지 예시 |
 | ![7  카카오톡상담](https://github.com/user-attachments/assets/39403200-25d6-4353-b696-d834e5c47959) | <img src="https://github.com/user-attachments/assets/90537284-3854-4856-97b2-af331272eeab" width="180" align="middle"/> <span align="middle">→</span> <img src="https://github.com/user-attachments/assets/f6f8eab4-397d-4382-9acb-db8986124a5c" width="180" align="middle"/> |
 
 
